@@ -1,16 +1,16 @@
-''' module to analyze text sentiment '''
+''' module to analyze text emotion '''
 
 import json
 import requests
 
 # NOTE: THIS ONLY WORKS INSIDE IBM LAB
 
-text_to_analyse = input("Insert text to analyse: ")
+#text_to_analyse = input("Insert text to analyse: ")
 
-# Define a function named sentiment_analyzer that takes a string input (text_to_analyse)
-def sentiment_analyzer(text_to_analyse):
-    ''' ANALYZES SENTIMENT '''
-    # URL of the sentiment analysis service
+# Define a function named emotion_analyzer that takes a string input (text_to_analyse)
+def emotion_analyzer(text_to_analyse):
+    ''' ANALYZES EMOTION '''
+    # URL of the emotion analysis service
     url = 'https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict'
     # Create a dictionary with the text to be analyzed
     myobj = { "raw_document": { "text": text_to_analyse } }
@@ -47,4 +47,4 @@ def sentiment_analyzer(text_to_analyse):
             'dominant_emotion:', dominant_emotion
             )  # Return the response text from the API
 
-sentiment_analyzer(text_to_analyse)
+#emotion_analyzer(text_to_analyse)
